@@ -1,0 +1,14 @@
+@function calculateRem($size) 
+  $remSize: $size / 16px
+  @return $remSize * 1rem
+
+=font-size($size) 
+  font-size: $size
+  font-size: calculateRem($size)
+
+$font-primary: 'Oswald', sans-serif
+
+body
+	font-family: $font-primary
+	font-size: 100%
+	color: #fff
